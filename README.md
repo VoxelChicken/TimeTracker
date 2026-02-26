@@ -112,7 +112,7 @@ Now that you have found out the process' name, you have to modify the code accor
 > Open the "main.py" file in your desired text editor.
 
 > **Step 2:**  
-> Change the (as of now) the **4. line**  
+> Change this line of code:  
 > from this:  
 > ```python
 > tc = TimeTracker.TimeTracker(program_to_check="godot-bin", program_to_run="org.godotengine.Godot")
