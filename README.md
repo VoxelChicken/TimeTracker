@@ -17,7 +17,7 @@ There's two ways you can download this project.
 > Since you need to open the terminal (which some might have not even touched yet, and I get that they are scared of it at first), this way is recommended for the people who know what they are doing.
 
 > **Step 1:**  
-> Open the terminal and go to the desired folder (in which you want the cloned repo to be located in).
+> Open the terminal and navigate to the desired folder (in which you want the cloned repo to be located in).
 
 > [!NOTE]  
 > For the first step, I would strongly recommend you make a folder that has the program you want to track as its name, so e.g. "Godot-Time-Tracker".
@@ -129,6 +129,12 @@ Now that you have found out the process' name, you have to modify the code accor
 > flatpak search [PROGRAM_NAME]
 > ```
 > This will search for the program on *Flathub*.
+
+Next, the first line of code in the *main.py* script is this:
+```python
+#!/usr/bin/python
+```
+You *MUST* to replace this with the location of the Python "executable" on your computer. This was just like it on mine, but you very likely will have to change it.
 
 Now that that's done, navigate to the *code* folder using the terminal and run the python program using this terminal command:  
 ```bash
