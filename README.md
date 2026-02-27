@@ -16,19 +16,19 @@ There's two ways you can download this project.
 > [!NOTE]  
 > Since you need to open the terminal (which some might have not even touched yet, and I get that they are scared of it at first), this way is recommended for the people who know what they are doing.
 
-> **Step 1:**  
-> Open the terminal and navigate to the desired folder (in which you want the cloned repo to be located in).
+**Step 1:**  
+    - Open the terminal and navigate to the desired folder (in which you want the cloned repo to be located in).
 
 > [!NOTE]  
 > For the first step, I would strongly recommend you make a folder that has the program you want to track as its name, so e.g. "Godot-Time-Tracker".
 
 
-> **Step 2:**  
-> Copy paste this command:  
-> ```bash
-> gh repo clone VoxelChicken/TimeTracker  
-> ```
-> This will clone the entire GitHub repository.
+**Step 2:**  
+    - Copy paste this command:  
+        ```bash
+        gh repo clone VoxelChicken/TimeTracker  
+        ```
+        This will clone the entire GitHub repository.
 
 ## Through the GitHub Website UI
 
@@ -51,19 +51,15 @@ The files / folders in this repo include:
 ".gitignore" - this is needed for the .venv and .idea (and other) files to not get pushed to the GitHub repo.  
 "README.md" - (the thing you're reading currently)
 
-> "code" contents:  
->> "TimeTracker.py" - the mini "library" (or simple class) that makes the project's code a bit easier to read. This "library" will then get imported into "main.py".
->> 
->> "main.py" - the main program of them all, it basically coordinates all the files neatly.
->> 
->> "seconds-data" - Holds the amount of seconds you've spent in the targeted program.
->> 
->> "program_to_check" - containing a simple line for the bash script ("run_program.sh") to know which program to look for (if it's running). As an example, if you would want to check for Godot, it should say "godot-bin". (Explanation found below.)
->> 
->> "run_program.sh" - the shell script that checks roughly every second to see if the program is still running. It exits if it can't be found any longer. (The "main.py" automatically notices the shell script's end and continues with the "atexit.register()" function.
+"code" contents:  
+    - "TimeTracker.py" - the mini "library" (or simple class) that makes the project's code a bit easier to read. This "library" will then get imported into "main.py".  
+    - "main.py" - the main program of them all, it basically coordinates all the files neatly.
+    - "seconds-data" - Holds the amount of seconds you've spent in the targeted program.
+    - "program_to_check" - containing a simple line for the bash script ("run_program.sh") to know which program to look for (if it's running). As an example, if you would want to check for       Godot, it should say "godot-bin". (Explanation found below.)
+    - "run_program.sh" - the shell script that checks roughly every second to see if the program is still running. It exits if it can't be found any longer. (The "main.py" automatically notices the shell script's end and continues with the "atexit.register()" function.
 
-> "img" contents:  
->> The images and screenshots. There's really not much to say about this.
+"img" contents:  
+    - The images and screenshots. There's really not much to say about this.
 
 
 # Setup
@@ -76,17 +72,17 @@ You will now want to check what program's EXACT name to check for. It might be a
 
 To do this, follow these steps:
 
-> **Step 1:**  
-> Open the terminal and the program you want to run NORMALLY (like you would any other, normal day).
+**Step 1:**  
+    - Open the terminal and the program you want to run NORMALLY (like you would any other, normal day).
 
-> **Step 2:**  
-> Now, think of the program name anybody normally calls it, like "godot", "pycharm", or anything else, it just has to be something that could maybe be it.
+**Step 2:**  
+    - Now, think of the program name anybody normally calls it, like "godot", "pycharm", or anything else, it just has to be something that could maybe be it.
 
-> **Step 3:**  
-> Copy paste this command (where [PROGRAM_NAME] is your guessed program name you came up with to look for in *step 2*):  
-> ```bash
-> ps -e | grep [PROGRAM_NAME]
-> ```
+**Step 3:**  
+    - Copy paste this command (where [PROGRAM_NAME] is your guessed program name you came up with to look for in *step 2*):  
+        ```bash
+        ps -e | grep [PROGRAM_NAME]
+        ```
 
 > [!IMPORTANT]
 > If you don't see any program that shows up, then run the command again but with a **different program name**. Keep doing this until you get a program name.  
@@ -108,20 +104,20 @@ Then, the program should show up. This is an example of me trying to look up "go
 
 Now that you have found out the process' name, you have to modify the code accordingly.
 
-> **Step 1:**  
-> Open the "main.py" file in your desired text editor.
+**Step 1:**  
+    - Open the "main.py" file in your desired text editor.
 
-> **Step 2:**  
-> Change this line of code:  
-> from this:  
-> ```python
-> tc = TimeTracker.TimeTracker(program_to_check="godot-bin", program_to_run="org.godotengine.Godot")
-> ```
-> to this:  
-> ```python
-> tc = TimeTracker.TimeTracker(program_to_check="[PROGRAM_NAME]", program_to_run="[FLATHUB_WEBSITE_NAME]")"
-> ```
-> (where the *PROGRAM_NAME* is the program's name you have found out using the terminal, and *FLATHUB_WEBSITE_NAME* is the way you downloaded the program via Flatpak, so for Godot, it's "org.godotengine.Godot".).
+**Step 2:**  
+    - Change this line of code:  
+        from this:  
+        ```python
+        tc = TimeTracker.TimeTracker(program_to_check="godot-bin", program_to_run="org.godotengine.Godot")
+        ```
+        to this:  
+        ```python
+        tc = TimeTracker.TimeTracker(program_to_check="[PROGRAM_NAME]", program_to_run="[FLATHUB_WEBSITE_NAME]")"
+        ```
+        (where the *PROGRAM_NAME* is the program's name you have found out using the terminal, and *FLATHUB_WEBSITE_NAME* is the way you downloaded the program via Flatpak, so for Godot, it's "org.godotengine.Godot".).
 
 > [!NOTE]
 > If you're unsure about the name of the website that you downloaded it from, you can run this in your terminal:  
