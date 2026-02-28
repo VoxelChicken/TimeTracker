@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> If anthing remains unclear during this tutorial, please open a new GitHub issue through this link -> https://github.com/VoxelChicken/TimeTracker/issues
+> If anthing remains unclear during this tutorial, please open a new GitHub issue through this link -> https://github.com/VoxelChicken/TimeTracker/discussions
 
 # Requirements
 
@@ -143,9 +143,11 @@ python main.py
 
 This will run the *main.py* script, which launches the program and tracks its usage time.
 
-# Issues?
+# Issues? Something unclear?
 
-As I said many times by now - if you have any issues during this process, please open a new issue under https://github.com/VoxelChicken/TimeTracker/issues. It is really important to me and I would like to make everyone's experience better :D
+If something remains unclear during process, please open a new discussion under https://github.com/VoxelChicken/TimeTracker/issues.  
+Also, if you found an issue or something doesn't work, please open up a new issue under https://github.com/VoxelChicken/TimeTracker/issues.  
+It is really important to me and I would like to make everyone's experience better :D
 
 ---
 
