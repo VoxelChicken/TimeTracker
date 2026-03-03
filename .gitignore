@@ -4,4 +4,4 @@ code/.venv
 code/seconds-data
 code/program_to_run
 code/program_to_check
-*.kate-swp
+.idea
