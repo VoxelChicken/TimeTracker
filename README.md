@@ -91,7 +91,7 @@ To do this, follow these steps:
 > [!IMPORTANT]
 > If you don't see any program that shows up, then run the command again but with a **different program name**. Keep doing this until you get a program name.  
 > If you can't find any program at all, open up a new GitHub issue under:  
-> https://github.com/VoxelChicken/TimeTracker/issues
+> https://github.com/VoxelChicken/TimeTracker/discussions
 
 Then, the program should show up. This is an example of me trying to look up "godot".
 
@@ -115,13 +115,13 @@ Now that you have found out the process' name, you have to modify the code accor
 > Change this line of code:  
 > from this:  
 > ```python
-> tc = TimeTracker.TimeTracker(program_to_check="godot-bin", program_to_run="org.godotengine.Godot")
+> tc = TimeTracker.TimeTracker(program_to_check="godot-bin", program_to_run="org.godotengine.Godot", target_file="seconds-data")
 > ```
 > to this:  
 > ```python
-> tc = TimeTracker.TimeTracker(program_to_check="[PROGRAM_NAME]", program_to_run="[FLATHUB_WEBSITE_NAME]")"
+> tc = TimeTracker.TimeTracker(program_to_check="[PROGRAM-NAME]", program_to_run="[FLATHUB-WEBSITE-NAME]", target_file="[PLAY-TIME-SAVE-FILE-NAME]")
 > ```
-> (where the *PROGRAM_NAME* is the program's name you have found out using the terminal, and *FLATHUB_WEBSITE_NAME* is the way you downloaded the program via Flatpak, so for Godot, it's "org.godotengine.Godot".).
+> (where the *PROGRAM-NAME* is the program's name you have found out using the terminal, and *FLATHUB-WEBSITE-NAME* is the way you downloaded the program via Flatpak, so for Godot, it's "org.godotengine.Godot".). The *PLAY-TIME-SAVE-FILE-NAME* should be the file you keep the usage time of your desired program in.
 
 > [!NOTE]
 > If you're unsure about the name of the website that you downloaded it from, you can run this in your terminal:  
@@ -145,7 +145,7 @@ This will run the *main.py* script, which launches the program and tracks its us
 
 # Issues? Something unclear?
 
-If something remains unclear during process, please open a new discussion under https://github.com/VoxelChicken/TimeTracker/issues.  
+If something remains unclear during process, please open a new discussion under https://github.com/VoxelChicken/TimeTracker/discussions.  
 Also, if you found an issue or something doesn't work, please open up a new issue under https://github.com/VoxelChicken/TimeTracker/issues.  
 It is really important to me and I would like to make everyone's experience better :D
 
